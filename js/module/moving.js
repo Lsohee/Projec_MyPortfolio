@@ -1,49 +1,27 @@
 export const root = document.getElementById("container");
 export const arr = Array.from(container.children);
 export const movingObj = {
-
-movingObjI : arr[0],
-movingObjMy : arr[1],
-movingObjMe : arr[2],
-movingObjMine : arr[3],
-movingObjMyself : arr[4],
+  movingObjI : arr[0],
+  movingObjMy : arr[1],
+  movingObjMe : arr[2],
+  movingObjMine : arr[3],
+  movingObjMyself : arr[4],
+}
+export let movement = function() {
+  // movingObj.movingObjI.style.width = "400px";
+  // movingObj.movingObjI.style.height = "400px";
+  console.log(movingObj)
+  return;
+}
 
 /*
-    이벤트 발생시 변화를 줘야할 요소
-    1. 물체들의 크기
-    2. 블러 처리
-    3. 움직임
+todo 무엇을 : object들을  
+todo 의도 : 크기를 증가시켜서 화면을 줌인하는 느낌을 주고 싶음
+순서
+// 1. 호출
+2. 크기를 제어하는 방법 찾기
+? 여기서 함수로 movingObjI를 제어하려고 하면 안됨 -> why?
+? 크기 제어부터가 안되는 구나 
+3. 이벤트 발생시 크기가 변하는 함수
+4. 크기가 변하는 대상 (object)를 변경할 수 있는 방법 연구
 */ 
-//   zoomIn : function(obj){
-//   let widthValue ;
-//   let heightValue;
-//   // widthValue ;
-//   // heightValue;
-//   console.dir(obj)
-//   obj.style.height = heightValue + "px";
-//   obj.style.width = widthValue + "px";
-
-//   if(widthValue ===300){
-//     console.log("꿈이 아파 잠들지 못하는 밤")
-//     // heightValue = 400;
-//     // widthValue = 400;
-//     // 똑딱이 잘 됨 -> 스위치 완료
-//     // currnt =false;
-//     return false;
-//   }else {
-//     console.log("작은 숨소리마저 아려와")
-//     widthValue = 300;
-//     heightValue = 300;
-//     // currnt =true;
-//   }
-//   // return move;
-// },
-
-
-
-// movement : root.addEventListener("click", this.zoomIn(movingObj.movingObjMine))
-
-}
-// console.log(movingObj.movingObjI);
-// console.log(movingObjI);
-// // ? 왜 콘솔 찍었는데 movingObj가 null로 나올까나
