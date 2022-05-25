@@ -11,45 +11,47 @@
 
 <body>
   <div id="container">
+    <div id="root">
     <div>1</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
+  </div>
   <!-- <script type="module" src="./js/module.js"></script> -->
   <script>
-    const root = document.getElementById("container");
-    const arr = Array.from(container.children);
-    const movingObj = {
-      movingObjI: arr[0],
-      movingObjMy: arr[1],
-      movingObjMe: arr[2],
-      movingObjMine: arr[3],
-      movingObjMyself: arr[4],
-    }
-    
+    const root = document.getElementById("root");
+    const arr = Array.from(root.children);
+console.log(arr)
+    // root.style.overflow = "hidden"
     let current = true;
-    
-    movement = function(obj){
-      // console.log(this)
-      // console.log("1")
-      // <!-- ? 이렇게 밖으로 함수를 빼니까 스위치 자체가 안됨 - 그렇다고 안에 넣자니 변수를 쓸 수 가 없음
+    // <!--memo 별도로 콜백함수를 분리하고 싶음 
+    // <!-- ? 밖으로 함수를 빼니까 스위치 자체가 안됨 - 그렇다고 안에 넣자니 변수를 쓸 수 가 없음
+    // <!--memo 일단 스위치 기능을 위한 click이벤트를 다시 복구 
+      
+      let obj ;
+      
+      root.addEventListener("click",function(){
+      
       if(current === true){
-        obj.style.width = "400px";
-        obj.style.height = "400px";
+        // console.log(obj)
+        obj.style.width = "5000px";
+        obj.style.height = "5000px";
+        obj.style.left = "500px"
         current = false;
         console.log("zoom in")
       }else{
-        obj.style.width = "200px";
-        obj.style.height = "200px";
+        obj.style.width = "2000px";
+        obj.style.height = "2000px";
         console.log("zoom out")
         current =true;
       }}
-      
-      root.addEventListener("click",movement(movingObj.movingObjI));
-    // console.log(movingObj.movingObjI);
-          
+    );
+
+    obj = movingObj.movingObjI;
+
+    // <!--?.....왜 되지? function에는 소괄호에 매개변수가 들어가야하는 거 아니였어? 전역변수로 선언하면 어디서든 쓸 수 있는거니까 상관없나?
           // movement(movingObj.movingObjI)
 
     // function movement(obj){

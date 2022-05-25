@@ -7,12 +7,14 @@
   width: 100vw;
   height: 100vh;
   background-color: #dddddd;
+  overflow: hidden;
 }
-#container > div:nth-child(1) {
+
+#root > div:nth-child(1) {
   border: 1px solid black;
   width: 300px;
   height: 300px;
-  background-color: #c4c4c4;
+  background-color: rgba(196, 196, 196, 0.3529411765);
   border-radius: 50%;
   text-align: center;
   position: absolute;
@@ -20,11 +22,11 @@
   left: 300px;
   top: 300px;
 }
-#container > div:nth-child(2) {
+#root > div:nth-child(2) {
   border: 1px solid black;
   width: 200px;
   height: 200px;
-  background-color: #c4c4c4;
+  background-color: rgba(196, 196, 196, 0.3529411765);
   border-radius: 50%;
   text-align: center;
   position: absolute;
@@ -32,11 +34,11 @@
   left: 240px;
   top: 300px;
 }
-#container > div:nth-child(3) {
+#root > div:nth-child(3) {
   border: 1px solid black;
   width: 150px;
   height: 150px;
-  background-color: #c4c4c4;
+  background-color: rgba(196, 196, 196, 0.3529411765);
   border-radius: 50%;
   text-align: center;
   position: absolute;
@@ -44,11 +46,11 @@
   left: 550px;
   top: 300px;
 }
-#container > div:nth-child(4) {
+#root > div:nth-child(4) {
   border: 1px solid black;
   width: 100px;
   height: 100px;
-  background-color: #c4c4c4;
+  background-color: rgba(196, 196, 196, 0.3529411765);
   border-radius: 50%;
   text-align: center;
   position: absolute;
@@ -56,11 +58,11 @@
   left: 550px;
   top: 400px;
 }
-#container > div:nth-child(5) {
+#root > div:nth-child(5) {
   border: 1px solid black;
   width: 50px;
   height: 50px;
-  background-color: #c4c4c4;
+  background-color: rgba(196, 196, 196, 0.3529411765);
   border-radius: 50%;
   text-align: center;
   position: absolute;

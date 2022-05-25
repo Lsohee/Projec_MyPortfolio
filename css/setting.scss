@@ -1,9 +1,9 @@
 *{margin:0; padding:0;}
-@mixin cricle-stlye ($width, $height,$color,$z-index,$left,$top:300px) {
+@mixin cricle-stlye ($width, $height,$z-index,$left,$top:300px) {
   border: 1px solid black;
   width:$width;
   height:$height;
-  background-color: $color;
+  background-color: #c4c4c45a;
   border-radius: 50%;
   text-align: center;
   position: absolute;
@@ -11,27 +11,35 @@
   left:$left;
   top:$top;
 }
+
+
+
 #container{
   width:100vw;
   height:100vh;
   background-color: #dddddd;
+  overflow: hidden;
+  // ? overflow : hidden; 했는데 왜 안잘릴까
   // display: flex;
   // justify-content: center;
   // align-items: center;
+}
+#root{
+
   &>div:nth-child(1){
-    @include cricle-stlye(300px,300px, #c4c4c4, 5,300px );
+    @include cricle-stlye(300px,300px, 5,300px );
   }
   &>div:nth-child(2){
-    @include cricle-stlye(200px, 200px, #c4c4c4, 4, 240px);
+    @include cricle-stlye(200px, 200px, 4, 240px);
     // filter: blur(10px);
   }
   &>div:nth-child(3){
-    @include cricle-stlye(150px, 150px, #c4c4c4, 3, 550px)
+    @include cricle-stlye(150px, 150px, 3, 550px)
   }
   &>div:nth-child(4){
-    @include cricle-stlye(100px, 100px,#c4c4c4, 2, 550px,400px)
+    @include cricle-stlye(100px, 100px, 2, 550px,400px)
   }
   &>div:nth-child(5){
-    @include cricle-stlye(50px, 50px,#c4c4c4, 2, 460px,270px)
+    @include cricle-stlye(50px, 50px, 2, 460px,270px)
   }
 }
