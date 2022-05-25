@@ -1,5 +1,6 @@
 *{margin:0; padding:0;}
 @mixin cricle-stlye ($width, $height,$color,$z-index,$left,$top:300px) {
+  border: 1px solid black;
   width:$width;
   height:$height;
   background-color: $color;
@@ -9,7 +10,6 @@
   z-index: $z-index;
   left:$left;
   top:$top;
-  
 }
 #container{
   width:100vw;
@@ -22,15 +22,16 @@
     @include cricle-stlye(300px,300px, #c4c4c4, 5,300px );
   }
   &>div:nth-child(2){
-    @include cricle-stlye(200px, 200px, blue, 4, 200px)
+    @include cricle-stlye(200px, 200px, #c4c4c4, 4, 240px);
+    // filter: blur(10px);
   }
   &>div:nth-child(3){
-    @include cricle-stlye(150px, 150px, blue, 3, 550px)
+    @include cricle-stlye(150px, 150px, #c4c4c4, 3, 550px)
   }
   &>div:nth-child(4){
-    @include cricle-stlye(100px, 100px, red, 2, 550px,400px)
+    @include cricle-stlye(100px, 100px,#c4c4c4, 2, 550px,400px)
   }
   &>div:nth-child(5){
-    @include cricle-stlye(100px, 100px, red, 2, 460px,270px)
+    @include cricle-stlye(50px, 50px,#c4c4c4, 2, 460px,270px)
   }
 }
