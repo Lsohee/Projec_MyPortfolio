@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
   <div id="container">
     <div>1</div>
@@ -15,6 +17,50 @@
     <div>4</div>
     <div>5</div>
   </div>
-  <script type="module" src="./js/module.js"></script>
+  <!-- <script type="module" src="./js/module.js"></script> -->
+  <script>
+    const root = document.getElementById("container");
+    const arr = Array.from(container.children);
+    const movingObj = {
+      movingObjI: arr[0],
+      movingObjMy: arr[1],
+      movingObjMe: arr[2],
+      movingObjMine: arr[3],
+      movingObjMyself: arr[4],
+    }
+    
+    let current = true;
+    
+    movement = function(obj){
+      // console.log(this)
+      // console.log("1")
+      // <!-- ? 이렇게 밖으로 함수를 빼니까 스위치 자체가 안됨 - 그렇다고 안에 넣자니 변수를 쓸 수 가 없음
+      if(current === true){
+        obj.style.width = "400px";
+        obj.style.height = "400px";
+        current = false;
+        console.log("zoom in")
+      }else{
+        obj.style.width = "200px";
+        obj.style.height = "200px";
+        console.log("zoom out")
+        current =true;
+      }}
+      
+      root.addEventListener("click",movement(movingObj.movingObjI));
+    // console.log(movingObj.movingObjI);
+          
+          // movement(movingObj.movingObjI)
+
+    // function movement(obj){
+  // 크기 동적제어 완료 -> 이제 이거를 함수화 시킬것임
+// };
+
+// movement(movingObj.movingObjI);
+
+
+
+  </script>
 </body>
+
 </html>
